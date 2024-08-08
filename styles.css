@@ -1,0 +1,147 @@
+/* Estilo geral */
+body {
+    font-family: 'Proza Libre', Helvetica, Arial, Lucida, sans-serif;
+    background-color: #EEF0F2;
+    color: #4F002F;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    margin: 10px 0;
+    color: #FFFFFF;
+}
+
+.bio {
+    font-family: 'Proza Libre', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #a83018;
+    color: #EEF0F2;
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    position: relative;
+    width: 100%; /* Ajusta a largura para ocupar 100% do container */
+    box-sizing: border-box;
+}
+
+.link i {
+    position: absolute;
+    left: 15px;
+    font-size: 1.2em;
+}
+
+.link:hover {
+    background-color: #4F002F;
+    transform: scale(1.05);
+}
+
+/* Botões de campanhas com largura reduzida */
+.campaign-link {
+    max-width: 85%; /* Define a largura máxima como 85% do container */
+    margin: 10px auto; /* Centraliza horizontalmente */
+    font-size: 16px; /* Ajusta o tamanho da fonte se necessário */
+    padding: 12px; /* Ajusta o padding para controlar a altura */
+}
+
+/* Estilo do rodapé */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #474B24;
+}
+
+/* Modo claro/escuro automático com prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #4F002F;
+        color: #EEF0F2;
+        background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    }
+
+    .container {
+        background-color: #474B24;
+        color: #EEF0F2;
+    }
+
+    .link {
+        background-color: #a83018;
+        color: #EEF0F2;
+        border-radius: 20px;
+    }
+
+    .link:hover {
+        background-color: #BFACB5;
+        color: #4F002F;
+    }
+
+    h1, .bio {
+        color: #EEF0F2;
+    }
+
+    footer {
+        color: #EEF0F2;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        max-width: 300px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .link {
+        padding: 12px;
+        font-size: 16px;
+    }
+    .link i {
+        font-size: 1em;
+    }
+    .campaign-link {
+        max-width: 90%; /* Ajusta a largura máxima para 90% no modo mobile */
+    }
+}
