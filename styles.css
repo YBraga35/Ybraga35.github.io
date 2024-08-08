@@ -4,22 +4,53 @@ body {
     background-color: #EEF0F2;
     color: #4F002F;
     margin: 0;
-    padding: 0;
+    padding: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    background-image: url('/img/portao-floresta-fundo.jpeg');
+    background-size: cover;
 }
 
 .container {
     text-align: center;
     max-width: 400px;
-    width: 100%;
+    width: 85%;
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    background-size: auto;
+}
+
+.container-campanha {
+    width: calc(90% - 40px);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+section p {
+    font-size: 1rem;
+    color: #4F002F;
+    line-height: 1.6;
 }
 
 .avatar {
@@ -27,13 +58,6 @@ body {
     height: 100px;
     border-radius: 50%;
     margin-bottom: 20px;
-}
-
-h1 {
-    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-    font-size: 26px;
-    margin: 10px 0;
-    color: #FFFFFF;
 }
 
 .bio {
@@ -49,7 +73,7 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #a83018;
+    background-color: rgb(170, 48, 24);
     color: #EEF0F2;
     text-decoration: none;
     padding: 15px;
@@ -58,7 +82,7 @@ h1 {
     font-size: 18px;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
     position: relative;
-    width: 100%; /* Ajusta a largura para ocupar 100% do container */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -75,16 +99,17 @@ h1 {
 
 /* Botões de campanhas com largura reduzida */
 .campaign-link {
-    max-width: 85%; /* Define a largura máxima como 85% do container */
-    margin: 10px auto; /* Centraliza horizontalmente */
-    font-size: 16px; /* Ajusta o tamanho da fonte se necessário */
-    padding: 12px; /* Ajusta o padding para controlar a altura */
+    max-width: 85%;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 12px;
 }
+
 .vagas-link {
-    max-width: 60%; /* Define a largura máxima como 85% do container */
-    margin: 10px auto; /* Centraliza horizontalmente */
-    font-size: 16px; /* Ajusta o tamanho da fonte se necessário */
-    padding: 12px; /* Ajusta o padding para controlar a altura */
+    max-width: 60%;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 12px;
 }
 
 /* Estilo do rodapé */
@@ -92,6 +117,28 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #474B24;
+}
+
+/* Seção de vídeos */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.video {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video iframe {
+    width: 100%;
+    height: 270px;
 }
 
 /* Seção de personagens */
@@ -103,13 +150,97 @@ footer {
 }
 
 .character {
-    flex: 1 1 calc(50% - 20px); /* Ajustado para melhor espaçamento */
+    flex: 1 1 calc(50% - 20px);
     max-width: 300px;
-    background-color: #4F002F;
+    background-color: #aa3018;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.character h3 {
+    color: #EEF0F2;
+    /* Cor do texto */
+    background-color: #4F002F;
+    /* Cor do fundo */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border-radius: 20px;
+    /* Borda arredondada */
+    text-align: center;
+    /* Centraliza o texto */
+    cursor: pointer;
+    /* Indica que é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    /* Animação suave */
+    display: inline-block;
+    /* Mantém o tamanho do botão de acordo com o conteúdo */
+    margin: 10px 0;
+    /* Espaçamento superior e inferior */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona sombra para dar efeito de botão */
+}
+
+.character h3:hover {
+    background-color: #240115;
+    /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05);
+    /* Efeito de ampliação */
+}
+
+.vacancy-container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    gap: 10px;
+    /* Espaço entre o texto e o botão */
+    margin-top: 10px;
+    /* Espaço superior para separar do conteúdo acima */
+}
+
+.vacancy-container h2 {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin: 0;
+    /* Remove a margem padrão */
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: #FFFFFF;
+    width: 40px;
+    /* Tamanho do botão */
+    height: 40px;
+    /* Tamanho do botão */
+    border-radius: 50%;
+    /* Círculo */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    font-size: 20px;
+    /* Tamanho do ícone */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    /* Transições suaves */
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    /* Cor mais escura ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta ligeiramente o botão */
+}
+
+.whatsapp-button i {
+    margin: 0;
+    /* Remove margens adicionais ao redor do ícone */
 }
 
 .character-img {
@@ -120,12 +251,19 @@ footer {
     margin-bottom: 10px;
 }
 
+.logos {
+    width: 300px;
+    height: 185px;
+    border-radius: 20% 5% 5% 5%;
+    /* Arredonda apenas os cantos superior esquerdo e inferior direito */
+    margin-bottom: 10px;
+}
+
 /* Modo claro/escuro automático com prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #4F002F;
         color: #EEF0F2;
-        background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
     }
 
     .container {
@@ -144,7 +282,10 @@ footer {
         color: #4F002F;
     }
 
-    h1, .bio {
+    h1,
+    h2,
+    .bio,
+    section p {
         color: #EEF0F2;
     }
 
@@ -159,21 +300,36 @@ footer {
         max-width: 300px;
         padding: 15px;
     }
+    .link {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .link i {
+        font-size: 1em;
+    }
+
+    .campaign-link {
+        max-width: 90%;
+    }
+
+    .character {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    .video {
+        max-width: 100%;
+    }
+
+    .video-section {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         max-width: 100%;
         padding: 10px;
-    }
-    .link {
-        padding: 12px;
-        font-size: 16px;
-    }
-    .link i {
-        font-size: 1em;
-    }
-    .campaign-link {
-        max-width: 90%; /* Ajusta a largura máxima para 90% no modo mobile */
     }
 }
