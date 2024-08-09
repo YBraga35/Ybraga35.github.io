@@ -94,6 +94,32 @@ footer {
     color: #474B24;
 }
 
+/* Seção de personagens */
+.character-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.character {
+    flex: 1 1 calc(50% - 20px); /* Ajustado para melhor espaçamento */
+    max-width: 300px;
+    background-color: #4F002F;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.character-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
 /* Modo claro/escuro automático com prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
     body {
