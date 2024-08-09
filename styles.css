@@ -47,6 +47,11 @@ h2 {
     color: #FFFFFF;
 }
 
+h3 {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
 section p {
     font-size: 1rem;
     color: #4F002F;
@@ -159,39 +164,38 @@ footer {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .character h3 {
-    color: #EEF0F2;
-    /* Cor do texto */
-    background-color: #4F002F;
-    /* Cor do fundo */
-    padding: 10px 20px;
-    /* Espaçamento interno */
-    border-radius: 20px;
-    /* Borda arredondada */
-    text-align: center;
-    /* Centraliza o texto */
-    cursor: pointer;
-    /* Indica que é clicável */
+    color: #EEF0F2;    /* Cor do texto */
+    padding: 10px 20px;    /* Espaçamento interno */
+    text-align: center;    /* Centraliza o texto */
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-    /* Animação suave */
-    display: inline-block;
-    /* Mantém o tamanho do botão de acordo com o conteúdo */
-    margin: 10px 0;
-    /* Espaçamento superior e inferior */
-    text-decoration: none;
-    /* Remove o sublinhado */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Adiciona sombra para dar efeito de botão */
+    display: inline-block;    /* Mantém o tamanho do botão de acordo com o conteúdo */
+    margin: 10px 0;    /* Espaçamento superior e inferior */
+    text-decoration: none;    /* Remove o sublinhado */
 }
 
-.character h3:hover {
-    background-color: #240115;
-    /* Cor mais escura ao passar o mouse */
-    transform: scale(1.05);
-    /* Efeito de ampliação */
+.character h3 .title {
+    color: #EEF0F2;    /* Cor do texto */
+    font-size: 1.2rem;
+    text-decoration-thickness: 50%;
+    background-color: #4F002F;    /* Cor do fundo */
+    padding: 10px 20px;    /* Espaçamento interno */
+    border-radius: 20px;    /* Borda arredondada */
+    text-align: center;    /* Centraliza o texto */
+    cursor: pointer;    /* Indica que é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;    /* Animação suave */
+    display: inline-block;    /* Mantém o tamanho do botão de acordo com o conteúdo */
+    margin: 10px 0;    /* Espaçamento superior e inferior */
+    text-decoration: none;    /* Remove o sublinhado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    /* Adiciona sombra para dar efeito de botão */
+}
+
+.character h3-link:hover {
+    background-color: #240115;    /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05);    /* Efeito de ampliação */
 }
 
 .vacancy-container {
@@ -248,7 +252,8 @@ footer {
     height: 160px;
     border-radius: 20%;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;    /* Centraliza horizontalmente e mantém a margem inferior */
+    display: block;    /* Necessário para que o margin auto funcione corretamente */
 }
 
 .logos {
