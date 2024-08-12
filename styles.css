@@ -2,7 +2,7 @@
 body {
     font-family: 'Proza Libre', Helvetica, Arial, Lucida, sans-serif;
     background-color: #EEF0F2;
-    color: #4F002F;
+    color: ##900E2C;
     margin: 0;
     padding: 3%;
     display: flex;
@@ -18,7 +18,7 @@ body {
     max-width: 400px;
     width: 85%;
     padding: 20px;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 200, 212);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
@@ -38,23 +38,23 @@ header {
 h1 {
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     font-size: 2.5rem;
-    color: #FFFFFF;
+    color: #000000;
     margin: 10px 0;
 }
 
 h2 {
     font-size: 1.5rem;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 h3 {
     font-size: 1.2rem;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 section p {
     font-size: 1rem;
-    color: #4F002F;
+    color: #900E2C;
     line-height: 1.6;
 }
 
@@ -68,7 +68,7 @@ section p {
 .bio {
     font-family: 'Proza Libre', Helvetica, Arial, Lucida, sans-serif;
     font-size: 16px;
-    color: #FFFFFF;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -78,8 +78,8 @@ section p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: rgb(170, 48, 24);
-    color: #EEF0F2;
+    background-color: #FF9BB1;
+    color: #000000;
     text-decoration: none;
     padding: 15px;
     margin: 10px 0;
@@ -100,6 +100,7 @@ section p {
 .link:hover {
     background-color: #4F002F;
     transform: scale(1.05);
+    color: #EEF0F2;
 }
 
 /* Botões de campanhas com largura reduzida */
@@ -121,7 +122,7 @@ section p {
 footer {
     margin-top: 20px;
     font-size: 14px;
-    color: #474B24;
+    color: #301775;
 }
 
 /* Seção de vídeos */
@@ -157,18 +158,19 @@ footer {
 .character {
     flex: 1 1 calc(50% - 20px);
     max-width: 300px;
-    background-color: #aa3018;
+    background-color: #ff9bb1;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden; /* Adicionando overflow para garantir que o conteúdo fique dentro dos limites */
 }
 
 .character h3 {
-    color: #EEF0F2;    /* Cor do texto */
+    color: #000000;    /* Cor do texto */
     padding: 10px 20px;    /* Espaçamento interno */
     text-align: center;    /* Centraliza o texto */
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
@@ -178,19 +180,24 @@ footer {
 }
 
 .character h3 .title {
-    color: #EEF0F2;    /* Cor do texto */
+    color: #000000; /* Cor do texto */
     font-size: 1.2rem;
-    text-decoration-thickness: 50%;
-    background-color: #4F002F;    /* Cor do fundo */
-    padding: 10px 20px;    /* Espaçamento interno */
-    border-radius: 20px;    /* Borda arredondada */
-    text-align: center;    /* Centraliza o texto */
-    cursor: pointer;    /* Indica que é clicável */
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out;    /* Animação suave */
-    display: inline-block;    /* Mantém o tamanho do botão de acordo com o conteúdo */
-    margin: 10px 0;    /* Espaçamento superior e inferior */
-    text-decoration: none;    /* Remove o sublinhado */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    /* Adiciona sombra para dar efeito de botão */
+    background-color: #4F002F; /* Cor do fundo */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 20px; /* Borda arredondada */
+    text-align: center; /* Centraliza o texto */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease; /* Transição suave */
+    display: inline-block; /* Mantém o tamanho do botão de acordo com o conteúdo */
+    margin: 10px 0; /* Espaçamento superior e inferior */
+    text-decoration: none; /* Remove o sublinhado */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Adiciona uma sombra mais pronunciada */
+}
+
+.character h3 .title:hover {
+    background-color: #240115; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Efeito de ampliação */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Efeito de sombra mais intensa ao passar o mouse */
 }
 
 .character h3-link:hover {
@@ -210,7 +217,7 @@ footer {
 
 .vacancy-container h2 {
     font-size: 1.5rem;
-    color: #FFFFFF;
+    color: #000000;
     margin: 0;
     /* Remove a margem padrão */
 }
@@ -257,11 +264,14 @@ footer {
 }
 
 .logos {
-    width: 300px;
-    height: 185px;
+    width: 100%; /* Ajuste para 100% da largura do elemento pai */
+    height: auto; /* Ajuste automático da altura para manter a proporção */
+    max-width: 100%; /* Garante que a imagem nunca ultrapasse o tamanho do pai */
     border-radius: 20% 5% 5% 5%;
-    /* Arredonda apenas os cantos superior esquerdo e inferior direito */
     margin-bottom: 10px;
+}
+.logos:hover{
+    transform: scale(1.05);
 }
 
 /* Modo claro/escuro automático com prefers-color-scheme */
@@ -272,12 +282,12 @@ footer {
     }
 
     .container {
-        background-color: #474B24;
+        background-color: #22102b;
         color: #EEF0F2;
     }
 
     .link {
-        background-color: #a83018;
+        background-color:rgb(144, 14, 44);
         color: #EEF0F2;
         border-radius: 20px;
     }
@@ -287,9 +297,16 @@ footer {
         color: #4F002F;
     }
 
+    .character {
+        background-color: #600e2a;
+    }
+
     h1,
     h2,
+    h3,
     .bio,
+    .character h3,
+    .character h2,
     section p {
         color: #EEF0F2;
     }
@@ -321,6 +338,11 @@ footer {
     .character {
         flex: 1 1 100%;
         max-width: 90%;
+    }
+
+    .logos {
+        width: 90%; /* Reduzindo a largura da imagem no mobile para melhor ajuste */
+        height: auto;
     }
 
     .video {
